@@ -1592,7 +1592,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-    elif settings["button"] and not ENABLE_SHORTLINK:
+    elif settings.get("button") and not ENABLE_SHORTLINK:
         btn = [
             [
                 InlineKeyboardButton(
